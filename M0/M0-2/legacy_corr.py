@@ -41,7 +41,7 @@ for i in range(n):
     dy = dy + b * b
     prod = prod + a * b
 
-denom = dx * dy
+denom = math.sqrt(dx*dy)
 r = prod / denom
 
 print("n =", n)
