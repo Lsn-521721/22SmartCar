@@ -1,17 +1,17 @@
-import yaml
-import csv
+import yaml           #读写.yaml配置文件
+import csv            #存储表格数据
 import math
-import argparse
-import sys
+import argparse       #内置库：增加命令行参数
+import sys            #内置库：和Python解释器、操作系统环境交互
 
 def load_config(path):
-    # 把"读 yaml"的代码放这里
+    # 读 yaml的代码
     with open(path) as f:
         cfg = yaml.safe_load(f)
     return cfg
 
 def read_data(csv_path, col_x, col_y):
-    # 把"读 csv 两列"的代码放这里，返回 (xs, ys)
+    # 读 csv 两列的代码，返回 (xs, ys)
     xs = []
     ys = []
     with open(csv_path) as f:
@@ -22,8 +22,8 @@ def read_data(csv_path, col_x, col_y):
     return xs, ys
 
 def calc_corr(xs, ys):
-    # 把"算 n / mean_x / mean_y / r"的代码放这里
-    n = len(xs)
+    #算 n / mean_x / mean_y / r"的代码
+    n = l en(xs)
     sum_x = 0.0
     sum_y = 0.0
     for i in range(n):

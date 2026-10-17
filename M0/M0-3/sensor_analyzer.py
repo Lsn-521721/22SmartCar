@@ -24,13 +24,13 @@ sensor_analyzer.py —— 修复版
 """
 import csv
 import math
-import os
+import os        #内置标准库：和操作系统交互
 import sys
 import argparse
 
 
 def read_data(input_path):
-    """读取 CSV，返回 (times, values)。异常输入给出可读报错并不抛 Traceback。"""
+    """读取 CSV，返回 (times, values)。异常输入给出可读报错 Traceback。"""
     if not os.path.exists(input_path):
         print("错误：输入文件不存在：%s" % input_path)
         sys.exit(1)

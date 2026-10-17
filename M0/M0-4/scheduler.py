@@ -6,7 +6,7 @@ TaskScheduler —— 命令行任务调度模拟器
 运行结束生成 report.json。
 """
 import argparse
-import json
+import json         #Python字典列表相互转换
 import os
 import random
 import sys
@@ -146,7 +146,7 @@ def run_scheduler(tasks, timeout, seed, report_path):
             st = time.time()
             time.sleep(t.get("duration", 0.0))
             et = time.time()
-            # 每个任务 sleep 之后再做一次超时检查
+            # 每个任务 sleep 后做一次超时检查
             if timeout is not None and time.time() - start >= timeout:
                 timed_out = True
                 started_at[name] = st
